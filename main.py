@@ -5,7 +5,6 @@ import time
 import os
 
 randomSleep = random.randint(2,10)
-randomSleep = 1
 
 print("Sleeping for: %ds" % randomSleep)
 
