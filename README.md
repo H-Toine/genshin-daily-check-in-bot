@@ -10,6 +10,8 @@ chmod a+x main.py
 cp .env.example .env
 ```
 
+Get your cookie(s) and fill it in the .env file (or your environment) as explained in: https://am-steph.github.io/wayscript-login-helper/
+
 Then run it with: `./main.py`
 
 Of course, you'd want it to run every day, so you can set up a cronjob for this via `crontab -e` similar to this:
