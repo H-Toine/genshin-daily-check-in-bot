@@ -2,6 +2,12 @@
 
 A personal port from https://github.com/am-steph/wayscript-login-helper that I made to work on a raspberry pi.
 
+## Notes for Windows
+
+You may want to install [Git Bash](https://gitforwindows.org) to clone the repository  and to run below commands.
+
+If you can't see the dot files (.env), make sure you have "show hidden files" enabled
+
 ## Installation
 
 ```
@@ -39,14 +45,34 @@ Do not log out of any account to grab another cookie, just open incognito and ge
 
 ## Running the bot
 
-Then run it with: `./main.py`
+Run it with: `./main.py`
+
+### Scheduling
+
+Schedule a task, preferably setting the time after the daily reset.
+
+#### Linux
 
 Of course, you'd want it to run every day, so you can set up a cronjob for this via `crontab -e` similar to this:
 ```
 5 5 * * * /home/pi/Software/genshin-daily-check-in-bot/main.py >> /home/pi/Software/genshin-daily-check-in-bot/var/check-in.log 2>&1
 ```
 
+#### Windows
+
+Or if you're on Windows, you can use the Task Scheduler
+
+Create a basic task:
+  - Trigger: Daily
+  - Actions (Start a program):
+    - Browse to script
+    - Start in: location of the script
+
+## Telegram/Discord webhooks
+
 Haven't tested the discord webhook after porting, but added a very basic telegram notification.
+
+### Telegram
 
 To add telegram notifications:
 1. Create a bot via the BotFather (/newbot) as explained in https://core.telegram.org/bots
@@ -54,7 +80,11 @@ To add telegram notifications:
 3. Message the bot at least once
 4. Add the token to the `.env` file (filling chat id is not neccessary, as it will retrieve it from the first message)
 
+### Discord
 
+Follow the first 3 steps provided here: https://am-steph.github.io/wayscript-login-helper/#discord-webhooks
+
+Then fill in the discord webhook in the .env file
 
 Guide 
 https://am-steph.github.io/wayscript-login-helper/
