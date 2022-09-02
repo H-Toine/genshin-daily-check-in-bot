@@ -1,0 +1,5 @@
+discord_webhook==0.12.0
+python-dotenv==0.20.0
+python_telegram_bot==13.13
+requests==2.25.1
+telegram==0.0.1
