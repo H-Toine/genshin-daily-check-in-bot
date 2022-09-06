@@ -10,6 +10,6 @@ randomSleep = random.randint(2,10)
 
 print("Sleeping for: %ds" % randomSleep)
 
-# time.sleep(randomSleep)
-print(f"python {cwd}/genshin-os.py")
-# os.system(f"python {cwd}/genshin-os.py")
+time.sleep(randomSleep)
+
+os.system(f"python {cwd}/genshin-os.py")
