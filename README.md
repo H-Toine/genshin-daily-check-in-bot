@@ -40,7 +40,7 @@ Do not log out of any account to grab another cookie, just open incognito and ge
 - Open a new private browsing / Incognito window
 - Go to the MiHoYo event website on your new browser instance, and log in with your second account
 - Copy the document.cookie as before
-- Go back to the Wayscript page, and type a hash # at the end of your first cookie
+- Go back to your .env file, and type a hash # at the end of your first cookie
 - Paste your second cookie immediately after the # and remove the quotation marks “” if needed
 
 ## Running the bot
