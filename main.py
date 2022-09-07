@@ -4,12 +4,11 @@ import random
 import time
 import os
 
-cwd = os.getcwd()
+
 
 randomSleep = random.randint(2,10)
-
-print("Sleeping for: %ds" % randomSleep)
-
 time.sleep(randomSleep)
 
-os.system(f"python {cwd}/genshin-os.py")
+directory = os.path.dirname(os.path.realpath(__file__))
+os.chdir(directory)
+os.system(f"python {directory}/genshin-os.py")
